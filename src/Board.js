@@ -326,7 +326,27 @@
         colIndex++;
       }
       return false;
+    },
+
+
+
+    //add a position checking helper function:
+    isValidRookPosition: function (rowIndex, colIndex) {
+      this.togglePiece(rowIndex, colIndex);
+      var boolean = this.hasAnyRooksConflicts();
+      this.togglePiece(rowIndex, colIndex);
+      return !boolean;
+
+    },
+
+    isValidQueenPosition: function (rowIndex, colIndex) {
+      this.togglePiece(rowIndex, colIndex);
+      var boolean = this.hasAnyQueensConflicts();
+      this.togglePiece(rowIndex, colIndex);
+      return !boolean;
+
     }
+
 
     /*--------------------  End of Helper Functions  ---------------------*/
 
