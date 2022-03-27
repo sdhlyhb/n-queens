@@ -140,11 +140,6 @@ window.countNQueensSolutions = function(n) {
     solutionCount = helperFunction(0, queensInColumn, queensInMajorDiagonal, queensInMinorDiagonal);
   }
 
-
-
-
-
-
   console.log('Number of solutions for ' + n + ' queens:', solutionCount);
   return solutionCount;
 };
